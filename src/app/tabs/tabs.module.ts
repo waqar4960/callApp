@@ -6,13 +6,23 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
+import { HomePageModule } from '../pages/home/home.module';
+import { ChatsPageModule } from '../pages/chats/chats.module';
+import { NearMePageModule } from '../pages/near-me/near-me.module';
+import { ContactsPageModule } from '../pages/contacts/contacts.module';
+import { SettingsPageModule } from '../pages/settings/settings.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    HomePageModule,
+    ChatsPageModule,
+    NearMePageModule,
+    ContactsPageModule,
+    SettingsPageModule
   ],
   declarations: [TabsPage]
 })
