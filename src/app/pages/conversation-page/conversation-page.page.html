@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{chatDetails?.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="call-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="videocam-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="messages">
+    <ion-list>
+      <ion-item *ngFor="let message of chatDetails?.messages">
+        <ion-label>
+          <h2 class="message recieved">{{ message.text }}</h2>
+          <p class="message time">{{ message.time }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-input placeholder="Type your message..."></ion-input>
+      <ion-button fill="clear">
+        <ion-icon slot="icon-only" name="mic-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

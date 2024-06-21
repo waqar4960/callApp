@@ -1,0 +1,124 @@
+ion-header {
+  ion-toolbar {
+    padding-left: 24px;
+    --background: #e0030c;
+    --color: #ffffff;
+    text-align: center;
+  }
+  ion-button {
+    border: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+    border-radius: 50px;
+  }
+  ion-title {
+    font-family: Urbanist;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+  }
+  ion-chip {
+    --background: #ffffff;
+    --color: #e0030c;
+    padding: 0 15px 0 15px;
+    width: 70px;
+    height: 40px;
+    gap: 5px;
+    border-radius: 27px;
+    opacity: 0px;
+
+    ion-avatar {
+      height: 13.5px;
+      width: 13.5px;
+      margin: 0px;
+    }
+    ion-label {
+      font-size: 12px;
+    }
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background: #e0030c;
+    ion-searchbar {
+      --border: 1px solid red($color: #000000);
+      --border-radius: 16px;
+      --placeholder-color: #4b164c;
+      --placeholder-font-style: urbanist;
+      --placeholder-font-weight: 400;
+      margin-left: 10px;
+    }
+    ion-button {
+      margin-right: 14px;
+      border: 1.5px solid rgba($color: #ffffff, $alpha: 0.25);
+      border-radius: 50px;
+      ion-avatar {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+ion-content {
+  --background: #e0030c;
+  .chatsContent {
+    height: 86%;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    background-color: #ffffff;
+    border-radius: 32px 32px 0 0;
+    .customSegment {
+      padding: 20px;
+      padding-bottom: 0px;
+      ion-segment {
+        --background: #fab9b94d !important;
+        padding: 5px;
+        display: flex;
+        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+        border-radius: 14px;
+        ion-segment-button {
+          flex-grow: 6;
+          --transition: 0.5s ease-in;
+          --color-checked: #ffffff;
+          --background-checked: linear-gradient(
+            180deg,
+            #e0030c 0%,
+            #9b0207 100%
+          );
+          --indicator-color: transparent !important;
+          --color: #e0030c;
+          --border-radius: 11px;
+          --font-family: Urbanist;
+          --font-size: 16px;
+          --font-weight: 800;
+        }
+      }
+    }
+    .segmentContent {
+      ion-list {
+        ion-item {
+          ion-avatar {
+            img {
+              height: 56px;
+              width: 56px;
+            }
+          }
+          ion-label {
+            h2 {
+              font-family: Urbanist;
+              font-size: 18px !important;
+              font-weight: 600 !important;
+              color: #22172a;
+            }
+            p {
+              font-family: Urbanist;
+              font-size: 14px !important;
+              font-weight: 400;
+              color: #22172a;
+            }
+          }
+        }
+      }
+    }
+  }
+}

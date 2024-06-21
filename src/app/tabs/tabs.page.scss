@@ -1,1 +1,22 @@
-
+ion-tabs {
+  //   background: black;
+  ion-tab-bar {
+    background: #ffffff !important;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 15px;
+    border-radius: 40px;
+    ion-tab-button {
+      background: transparent !important;
+      --color: #a58ba6;
+      --color-selected: white;
+    }
+  }
+}
+ion-tab-button.selected {
+  ion-icon {
+    background-color: #9b0207;
+    padding: 15px;
+    border-radius: 50px;
+  }
+}
