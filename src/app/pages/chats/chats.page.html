@@ -55,13 +55,13 @@
       <ion-list class="ion-padding" lines="full" *ngSwitchCase="'messages'">
         <ion-item
           *ngFor="let chat of filteredChats"
-          (click)="openConversation(chat.id)"
+          (click)="navigateToConversation(chat.id)"
         >
           <ion-avatar slot="start">
             <img [src]="chat.avatar" />
           </ion-avatar>
           <ion-label>
-            <h2>{{ chat.name }}</h2>
+            <h2>{{ chat.user }}</h2>
             <p
               style="
                 width: 214px;
@@ -70,7 +70,7 @@
                 white-space: nowrap;
               "
             >
-              {{ chat.messages[0].text }}
+              {{ chat.messages[0].content }}
             </p>
           </ion-label>
           <div
@@ -96,7 +96,7 @@
               ></div
             ></ion-badge>
             <ion-note slot="end" color="medium"
-              >{{ chat.messages[0].time}}</ion-note
+              >{{ chat.messages[0].timestamp}}</ion-note
             >
           </div>
         </ion-item>

@@ -11,6 +11,7 @@ import { ChatsService } from 'src/app/services/chats.service';
 export class ChatsPage implements OnInit {
   searchTerm: string = '';
   selectedSegment: string = 'messages';
+  chats!: any[];
 
   // for search bar
   filteredChats: any[] = [];
@@ -20,7 +21,7 @@ export class ChatsPage implements OnInit {
     if (this.selectedSegment === 'messages') {
       this.filteredChats = this.chatService
         .getChats()
-        .filter((chat) => chat.name.toLowerCase().includes(searchTermLower));
+        .filter((chat) => chat.user.toLowerCase().includes(searchTermLower));
     } else if (this.selectedSegment === 'calls') {
       this.filteredCalls = this.callService
         .getCalls()
@@ -33,8 +34,8 @@ export class ChatsPage implements OnInit {
     this.filterList();
   }
   // chat conversation page routing
-  openConversation(chatID: number) {
-    this.router.navigate(['/conversation-page', chatID]);
+  navigateToConversation(chatId: number) {
+    this.router.navigate(['/conversation-page', chatId]);
   }
 
   constructor(
