@@ -22,8 +22,8 @@ import { SettingsPageModule } from '../pages/settings/settings.module';
     ChatsPageModule,
     NearMePageModule,
     ContactsPageModule,
-    SettingsPageModule
+    SettingsPageModule,
   ],
-  declarations: [TabsPage]
+  declarations: [TabsPage],
 })
 export class TabsPageModule {}

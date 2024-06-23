@@ -9,7 +9,7 @@ export class UserService {
     name: 'Waqar Ahmad',
     age: 25,
     location: 'Pakistan',
-    avatar: 'assets/4960.JPG',
+    avatar: '/assets/1.png',
     profileCompletion: 0.7,
   };
 

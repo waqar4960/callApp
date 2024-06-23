@@ -1,7 +1,7 @@
 ion-header {
   ion-toolbar {
     padding-top: 10px;
-    padding-left: 24px;
+    padding-left: 14px;
     padding-right: 2px;
     --color: #000000;
   }
@@ -21,16 +21,19 @@ ion-header {
     font-weight: 700;
     line-height: 30px;
     text-align: left;
+    padding-left: 2px;
   }
 }
 ion-content {
   .container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 10px;
+    justify-content: end;
     .message {
       max-width: 80%;
       word-wrap: break-word;
+      margin: 12px;
       padding: 12px 12px;
       display: flex;
       flex-direction: column;

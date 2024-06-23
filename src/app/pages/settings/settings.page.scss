@@ -1,70 +1,134 @@
+ion-header {
+  ion-toolbar {
+    ion-buttons {
+      ion-button {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+        border-radius: 50px;
+        border: 1px solid rgba($color: #22172a, $alpha: 0.1);
+      }
+    }
+  }
+}
 ion-content {
-  --padding-start: 16px;
-  --padding-end: 16px;
-}
-
-.profile-card {
-  text-align: center;
-  margin-top: 20px;
-
-  ion-item {
-    --padding-start: 0;
-  }
-
-  ion-avatar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-
-  ion-label h2 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-
-  ion-label p {
-    margin: 0;
-  }
-
-  .edit-profile-button {
-    margin-top: 10px;
-  }
-}
-
-.vip-card {
-  text-align: center;
-  margin-top: 20px;
-
-  ion-card-content {
+  background: #f9fafb;
+  .progress-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h2 {
-      margin: 10px 0;
+    .circleImg {
+      position: absolute;
+      height: 130px;
+      width: 100%;
+      text-align: center;
+      margin: 16px 0px;
     }
-
+    img {
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+    }
+    h2 {
+      font-family: Urbanist;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: left;
+      margin: 5px;
+    }
     p {
-      margin: 10px 0;
+      font-family: Urbanist;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19.6px;
+      text-align: left;
+      margin: 5px;
+    }
+    .editProfile {
+      display: flex;
+      flex-direction: row;
+      margin: 5px 24px;
+      background-color: #9b0207;
+      border-radius: 16px;
+      padding: 5px;
+      color: #ffffff;
+      font-family: Urbanist;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: left;
+      p {
+        padding: 5px;
+      }
+      ion-button {
+        --padding-bottom: 5px;
+        --padding-start: 5px;
+        --padding-end: 5px;
+        --padding-top: 5px;
+        span {
+          width: 108px;
+          font-family: Urbanist;
+          font-size: 14px;
+          font-weight: 800;
+          gap: 0;
+          line-height: 19.6px;
+          text-align: center;
+          color: rgba(224, 3, 12, 1);
+          padding: 0;
+          margin: 0;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  ion-list {
+    background: #f6f8fc;
+    ion-item {
+      margin: 10px;
+      font-family: Urbanist;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+      border-radius: 12px;
+      ion-note {
+        font-family: Urbanist;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19.6px;
+        text-align: right;
+        color: rgba(158, 163, 174, 1);
+      }
     }
   }
 }
-
-ion-footer {
-  ion-toolbar {
-    --background: #f8f8f8;
+.vip-card {
+  text-align: center;
+  ion-icon {
+    background: #9b0207 !important;
+    border: 6px solid #9b0207;
+    border-radius: 50%;
+  }
+  h2 {
+    font-family: Urbanist;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  p {
+    font-family: Urbanist;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.2px;
   }
 
-  ion-segment {
-    width: 100%;
-
-    ion-segment-button {
-      flex: 1;
-      justify-content: center;
-
-      ion-icon {
-        margin: 0;
-      }
-    }
+  a {
+    font-family: Urbanist;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16.2px;
+    color: #9b0207;
+    text-decoration: none;
   }
 }

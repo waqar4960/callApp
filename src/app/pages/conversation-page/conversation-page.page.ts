@@ -1,5 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IonContent } from '@ionic/angular';
 import { ChatsService } from 'src/app/services/chats.service';
 
 @Component({
@@ -7,12 +14,15 @@ import { ChatsService } from 'src/app/services/chats.service';
   templateUrl: './conversation-page.page.html',
   styleUrls: ['./conversation-page.page.scss'],
 })
-export class ConversationPagePage implements OnInit {
+export class ConversationPagePage implements OnInit, AfterViewInit {
+  @ViewChild(IonContent, { static: false }) content!: IonContent;
+
   chatsId!: number;
   chatDetails: any;
   chats!: any[];
   newMessage: string = '';
   chatId!: number;
+  inputText: any;
 
   constructor(
     private chatService: ChatsService,
@@ -27,12 +37,11 @@ export class ConversationPagePage implements OnInit {
       this.chatDetails = currentConv[0];
       console.log(currentConv?.[0].user);
     }
+    console.log(document.getElementsByClassName('container'));
+  }
 
-    // this.chatsId = Number(this.route.snapshot.paramMap.get('id'));
-    // console.log(this.chatsId);
-
-    // this.chatDetails = this.chatService.getChats();
-    // console.log(this.chatDetails);
+  ngAfterViewInit() {
+    this.scrollToBottom();
   }
 
   sendMessage() {
@@ -41,5 +50,12 @@ export class ConversationPagePage implements OnInit {
       this.newMessage = '';
       this.chats = this.chatService.getMessages(this.chatId); // Refresh messages
     }
+    setTimeout(() => {
+      this.scrollToBottom();
+    }, 100);
+  }
+
+  scrollToBottom() {
+    this.content.scrollToBottom(300);
   }
 }

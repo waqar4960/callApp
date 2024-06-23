@@ -25,8 +25,9 @@
 </ion-header>
 
 <ion-content>
-  <div class="container" *ngFor="let message of chats">
+  <div class="container" #container>
     <div
+      *ngFor="let message of chats"
       [ngClass]="{'sent': message.type === 'sent', 'received': message.type === 'received'}"
       class="message"
     >
@@ -46,10 +47,19 @@
         [(ngModel)]="newMessage"
         placeholder="Type your message..."
       ></ion-input>
-      <ion-button fill="clear" color="dark" (click)="sendMessage()"
+      <ion-button
+        *ngIf="newMessage.length"
+        fill="clear"
+        color="dark"
+        (click)="sendMessage()"
         ><ion-icon name="send-sharp"></ion-icon
       ></ion-button>
-      <ion-button style="background-color: brown" fill="clear" color="light">
+      <ion-button
+        *ngIf="!newMessage.length"
+        style="background-color: brown"
+        fill="clear"
+        color="light"
+      >
         <ion-icon name="mic-outline"></ion-icon>
       </ion-button>
     </ion-item>

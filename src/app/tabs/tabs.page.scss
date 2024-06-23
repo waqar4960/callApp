@@ -1,11 +1,11 @@
 ion-tabs {
+  background: #f6f8fc !important;
   ion-tab-bar {
-    background: #ffffff !important;
     margin-left: 24px;
     margin-right: 24px;
     margin-bottom: 15px;
     border-radius: 40px;
-    box-shadow: 0 8px 10px #752277;
+    box-shadow: 0 3px 3px #752277;
     ion-tab-button {
       background: transparent !important;
       --color: #a58ba6;
