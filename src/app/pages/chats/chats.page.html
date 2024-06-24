@@ -26,7 +26,7 @@
       placeholder="Search"
       [(ngModel)]="searchTerm"
       (ionInput)="filterList()"
-      [debounce]="1000"
+      [debounce]="300"
     ></ion-searchbar>
     <ion-button fill="clear" shape="round">
       <ion-avatar slot="icon-only">

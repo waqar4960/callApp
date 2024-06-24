@@ -23,7 +23,6 @@ export class ConversationPagePage implements OnInit, AfterViewInit {
   newMessage: string = '';
   chatId!: number;
   inputText: any;
-
   constructor(
     private chatService: ChatsService,
     private route: ActivatedRoute
