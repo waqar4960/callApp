@@ -9,6 +9,7 @@ interface Chat {
 interface Conversation {
   id: number;
   user: string;
+  avatar:string;
   messages: Chat[];
   unread: boolean;
 }
@@ -21,12 +22,14 @@ export class ChatsService {
       id: 1,
       user: 'Clara Hazel',
       unread: true,
+      avatar: 'https://www.w3schools.com/howto/img_avatar.png',
       messages: [
         {
           id: 1,
           sender: 'Clara Hazel',
-          content: 'Hi Nadia, Clara here! 👋',
+          content: 'Hi Bella, Clara here! 👋',
           timestamp: '8:24 PM',
+          
           type: 'received',
         },
         {
@@ -62,19 +65,20 @@ export class ChatsService {
     {
       id: 2,
       user: 'Brandon Aminoff',
+      avatar: 'https://www.w3schools.com/howto/img_avatar2.png',
       unread: false,
       messages: [
         {
           id: 1,
           sender: 'Brandon Aminoff',
-          content: 'Hi Waqar, Brandon here! 👋',
+          content: 'Hi Bella, Brandon here! 👋',
           timestamp: '8:24 PM',
           type: 'received',
         },
         {
           id: 2,
           sender: 'You',
-          content: 'Hey Brandon, Nice to meet you! 😅',
+          content: 'Hey Bella, Nice to meet you! 😅',
           timestamp: '8:25 PM',
           type: 'sent',
         },

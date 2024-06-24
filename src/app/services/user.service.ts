@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 export class UserService {
   private user = {
     id: 1,
-    name: 'Waqar Ahmad',
+    name: 'Emma Wattson',
     age: 25,
-    location: 'Pakistan',
+    location: 'Germany',
     avatar: '/assets/1.png',
     profileCompletion: 0.7,
   };
