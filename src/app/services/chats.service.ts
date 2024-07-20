@@ -9,7 +9,7 @@ interface Chat {
 interface Conversation {
   id: number;
   user: string;
-  avatar:string;
+  avatar: string;
   messages: Chat[];
   unread: boolean;
 }
@@ -29,7 +29,7 @@ export class ChatsService {
           sender: 'Clara Hazel',
           content: 'Hi Bella, Clara here! 👋',
           timestamp: '8:24 PM',
-          
+
           type: 'received',
         },
         {
@@ -109,8 +109,4 @@ export class ChatsService {
     }
   }
   constructor() {}
-
-  // getChatById(chatId: number) {
-  //   return this.chats.find((messages) => messages.id === chatId);
-  // }
 }

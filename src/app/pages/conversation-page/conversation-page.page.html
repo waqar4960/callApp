@@ -11,7 +11,7 @@
     </ion-button>
     <ion-title>{{chatDetails?.user}}</ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="navigateTocall(calls.id)">
         <ion-icon name="call" fill="clear" color="dark"></ion-icon>
       </ion-button>
       <ion-button>
@@ -81,7 +81,7 @@
         ><ion-icon name="send-sharp"></ion-icon
       ></ion-button>
       <ion-button
-        *ngIf="!newMessage.length"
+        *ngIf="!newMessage.length   "
         style="background-color: brown"
         fill="clear"
         color="light"
