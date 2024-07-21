@@ -11,15 +11,40 @@
     </ion-button>
     <ion-title>{{chatDetails?.user}}</ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="navigateTocall(calls.id)">
         <ion-icon name="call" fill="clear" color="dark"></ion-icon>
       </ion-button>
       <ion-button>
         <ion-icon name="videocam" fill="clear" color="dark"></ion-icon>
       </ion-button>
-      <ion-button>
-        <ion-icon name="ellipsis-vertical" fill="clear" color="dark"></ion-icon>
+      <ion-button id="context-menu-trigger">
+        <ion-icon name="ellipsis-vertical" fill="clear" color="dark">
+        </ion-icon>
       </ion-button>
+      <ion-popover trigger="context-menu-trigger" triggerAction="click">
+        <ng-template>
+          <ion-button
+            style="
+              color: rgba(34, 23, 42, 1);
+              font-family: urbanist;
+              font-size: 16px;
+              text-transform: capitalize;
+              width: 100%;
+              margin: 0px;
+              padding: 3px;
+            "
+            fill="clear"
+          >
+            <ion-icon
+              slot="start"
+              name="ban-sharp"
+              color="danger"
+              style="padding-right: 5px"
+            ></ion-icon>
+            Block User
+          </ion-button>
+        </ng-template>
+      </ion-popover>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -34,6 +59,7 @@
       <p>{{ message.content }}</p>
       <!-- <span>{{ message.timestamp }}</span> -->
     </div>
+    <app-voice-message></app-voice-message>
   </div>
 </ion-content>
 <ion-footer class="ion-no-border">
@@ -55,7 +81,7 @@
         ><ion-icon name="send-sharp"></ion-icon
       ></ion-button>
       <ion-button
-        *ngIf="!newMessage.length"
+        *ngIf="!newMessage.length   "
         style="background-color: brown"
         fill="clear"
         color="light"

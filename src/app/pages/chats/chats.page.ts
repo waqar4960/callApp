@@ -37,6 +37,9 @@ export class ChatsPage implements OnInit {
   navigateToConversation(chatId: number) {
     this.router.navigate(['/conversation-page', chatId]);
   }
+  navigateTocall(callId: number) {
+    this.router.navigate(['/single-call', callId]);
+  }
 
   constructor(
     private chatService: ChatsService,

@@ -7,14 +7,10 @@ import { IonicModule } from '@ionic/angular';
 import { ChatsPageRoutingModule } from './chats-routing.module';
 
 import { ChatsPage } from './chats.page';
+import { SingleCallPage } from '../callPages/single-call/single-call.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ChatsPageRoutingModule
-  ],
-  declarations: [ChatsPage]
+  imports: [CommonModule, FormsModule, IonicModule, ChatsPageRoutingModule],
+  declarations: [ChatsPage],
 })
 export class ChatsPageModule {}

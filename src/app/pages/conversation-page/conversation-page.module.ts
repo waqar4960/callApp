@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ConversationPagePageRoutingModule } from './conversation-page-routing.module';
 
 import { ConversationPagePage } from './conversation-page.page';
+import { VoiceMessageComponent } from './voice-message/voice-message.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ConversationPagePageRoutingModule
+    ConversationPagePageRoutingModule,
   ],
-  declarations: [ConversationPagePage]
+  declarations: [ConversationPagePage, VoiceMessageComponent],
 })
 export class ConversationPagePageModule {}

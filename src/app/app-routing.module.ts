@@ -14,6 +14,17 @@ const routes: Routes = [
         (m) => m.ConversationPagePageModule
       ),
   },
+  {
+    path: 'single-call/:id',
+    loadChildren: () =>
+      import('./pages/callPages/single-call/single-call.module').then(
+        (m) => m.SingleCallPageModule
+      ),
+  },  {
+    path: 'incoming-call',
+    loadChildren: () => import('./pages/callPages/incoming-call/incoming-call.module').then( m => m.IncomingCallPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

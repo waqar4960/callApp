@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+  <div
+    class="wrapper"
+    style="background: url({{calls.avatar}}) no-repeat center center/cover"
+  >
+    <div class="call-container">
+      <h1 class="name">{{calls.name}}</h1>
+      <p class="status">{{calls.status}}</p>
+    </div>
+    <div class="call-actions">
+      <ion-button shape="round" color="success" size="large">
+        <ion-icon name="call"></ion-icon>
+      </ion-button>
+      <ion-button shape="round" color="dark" size="large">
+        <ion-icon name="chatbubble"></ion-icon>
+      </ion-button>
+      <ion-button
+        shape="round"
+        color="danger"
+        size="large"
+        routerLink="/tabs/chats"
+      >
+        <ion-icon name="call"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

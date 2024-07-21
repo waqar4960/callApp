@@ -1,0 +1,33 @@
+ion-content {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .call-container {
+      .name {
+        font-family: Urbanist;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: #ffffff;
+      }
+      .status {
+        color: white;
+        margin-bottom: 40px;
+        font-family: Urbanist;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        text-align: center;
+      }
+    }
+    .call-actions {
+      margin-top: 450px;
+    }
+  }
+}
